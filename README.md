@@ -18,43 +18,44 @@ Kotlin ve Jetpack Compose ile geliştirilen bu Android uygulaması, kullanıcıl
 ---
 
 ## 🧱 Proje Mimarisi – Clean Architecture
-
+```
 com.albayemre.expensetrackingapplication
-├── data # Veritabanı (Room), Repository impl
-│ ├── local
-│ │ ├── ExpenseEntity.kt
-│ │ ├── ExpenseDao.kt
-│ │ ├── ExpenseDatabase.kt
-│ │ ├── Converters.kt
-│ │ └── ExpenseCategory.kt
-│ └── repository
-│ ├── ExpenseRepository.kt
-│ └── ExpenseRepositoryImpl.kt
+├── data
+│   ├── local
+│   │   ├── ExpenseEntity.kt
+│   │   ├── ExpenseDao.kt
+│   │   ├── ExpenseDatabase.kt
+│   │   ├── Converters.kt
+│   │   └── ExpenseCategory.kt
+│   └── repository
+│       ├── ExpenseRepository.kt
+│       └── ExpenseRepositoryImpl.kt
 │
-├── domain # İş kuralları ve UseCase'ler
-│ ├── model
-│ │ └── Expense.kt
-│ └── use_case
-│ ├── AddExpense.kt
-│ ├── DeleteExpense.kt
-│ ├── GetExpenses.kt
-│ ├── GetTotal.kt
-│ └── GetTotalPerCategory.kt
+├── domain
+│   ├── model
+│   │   └── Expense.kt
+│   └── use_case
+│       ├── AddExpense.kt
+│       ├── DeleteExpense.kt
+│       ├── GetExpenses.kt
+│       ├── GetTotal.kt
+│       └── GetTotalPerCategory.kt
 │
-├── presentation # UI, ViewModel, Navigation
-│ ├── ui
-│ │ ├── list/ExpenseListScreen.kt
-│ │ └── addedit/AddEditExpenseScreen.kt
-│ ├── nav
-│ │ └── ExpenseNavGraph.kt
-│ └── viewmodel
-│ └── ExpenseViewModel.kt
+├── presentation
+│   ├── ui
+│   │   ├── list/ExpenseListScreen.kt
+│   │   └── addedit/AddEditExpenseScreen.kt
+│   ├── nav
+│   │   └── ExpenseNavGraph.kt
+│   └── viewmodel
+│       └── ExpenseViewModel.kt
 │
-├── di # Hilt modülü
-│ └── AppModule.kt
+├── di
+│   └── AppModule.kt
 │
-├── ExpenseTrackingApplication.kt # Application sınıfı
+├── ExpenseTrackingApplication.kt
 └── MainActivity.kt
+```
 
 
 ---
